@@ -46,7 +46,7 @@ def get_location():
         
     base_url = "https://restapi.amap.com/v3/place/text?"
     parameters = {
-        "key": "82f956261ef4f7d7635481df110aa178",
+        "key": "",
         "types": "120000",
         "city": "021",
         "citylimit": "true"
