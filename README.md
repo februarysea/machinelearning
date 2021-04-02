@@ -60,3 +60,40 @@ cost function不收敛：learning rate设置太大，调整后解决
 
 * 多变量线性回归中cost function收敛过快：将每个features mean normalization后解决
 * 多维特征如何可视化没有想到很好的方法
+
+## week3
+
+**logistic回归**
+
+```
+.
+├── algorithm4.py
+├── data
+│   └── divorce.csv
+└── figures
+    └── costfunction.png
+```
+
+数据来源：http://archive.ics.uci.edu/ml/datasets/Divorce+Predictors+data+set#
+
+分类问题：通过数据集中的54类特征来预测是否会离婚
+
+将170个样本中，前150个作为训练集，后20个作测试集
+
+添加了accuracy函数来衡量模型的准确度
+
+能明显感觉到特征维度变多后，运行速度下降了不少
+
+遇到问题
+
+```
+[1]    93511 segmentation fault  python3 algorithm4.py
+```
+
+解决办法是使用虚拟环境
+```
+python3 -m venv env
+```
+
+贴一个原因
+https://stackoverflow.com/questions/10035541/what-causes-a-python-segmentation-fault
